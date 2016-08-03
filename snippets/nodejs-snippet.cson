@@ -383,7 +383,7 @@
   'arrow fn named':
     'prefix': 'arn'
     'body':'''
-      var ${1:name} = () => {
+      const ${1:name} = () => {
       \t${2:}
       }
     '''

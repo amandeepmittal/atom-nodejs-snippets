@@ -1,0 +1,491 @@
+'.source.js, .source.jsx, .source.ts':
+  #nodejs syntax
+  'require':
+    'prefix':'re'
+    'body':'require("${1:module}");'
+  'exports':
+    'prefix':'exp'
+    'body':'exports.${1:name} = ${2:value};'
+  'module.exports':
+    'prefix':'me'
+    'body':'module.exports = ${1:name};'
+  'callback':
+    'prefix':'cb'
+    'body':'''
+      function (err, ${1:arg}) {
+        ${2:}
+      }
+    '''
+  #node - path module
+  'path.join()':
+    'prefix':'pjoin'
+    'body':'path.join(${1:});'
+  'path.resolve()':
+    'prefix':'pres'
+    'body':'path.resolve(${1:});'
+  'path.dirname()':
+    'prefix':'pdir'
+    'body':'path.dirname(${1:});'
+  'path.basename()':
+    'prefix':'pbase'
+    'body':'path.basename(${1:});'
+  'path.extname()':
+    'prefix':'pext'
+    'body':'path.extname(${1:});'
+  #node - fs module
+  'fs.readFile':
+    'prefix':'fsread'
+    'body':'''
+      fs.readFile(${1:file}, ${2:charset}, function () {${3:}});
+    '''
+  'fs.createReadStream':
+    'prefix':'fsreadstream'
+    'body':'''
+      fs.createReadStream(${1:file}, ${2:options});
+    '''
+  'fs.writeFile':
+    'prefix':'fswrite'
+    'body':'''
+      fs.writeFile(${1:file}, ${2:content}, function () {${3:}});
+    '''
+  #node - event handler
+  'event handler':
+    'prefix':'on'
+    'body':'''
+      ${1:emitter}.on('${2:event}', function (${3:arguments}) {
+      \t${4:}
+      });
+    '''
+  #node - streams
+  'readable stream':
+    'prefix': 'rstream'
+    'body': """
+      var rs = new stream.Readable(${1:options});
+    """
+  'writable stream':
+    'prefix': 'wstream'
+    'body': """
+      var ws = new stream.Writable(${1:options});
+    """
+  'pipe':
+    'prefix':'pipe'
+    'body':'rs.pipe(ws);'
+  #node process & global variables
+  'process.env':
+    'prefix':'penv'
+    'body':'process.env.$1'
+  'process.cwd':
+    'prefix':'process.cwd'
+    'body':'process.cwd()'
+  'process.on':
+    'prefix':'process.on()'
+    'body':'process.on(${1:}, (${2:})=> {});'
+  'process.nextTick()':
+    'prefix':'process.nextTick'
+    'body':'''
+      process.nextTick( function(${1:arg}) {
+      \t${2:}
+      });
+    '''
+  'process.pid':
+    'prefix':'process.pid'
+    'body':'process.pid'
+  'process.stdin':
+    'prefix':'stdin'
+    'body':'process.stdin'
+  'process.stderr':
+    'prefix':'process.stderr'
+    'body':'process.stderr'
+  'process.stdout':
+    'prefix':'process.stdout'
+    'body':'process.stdout'
+  'process.version':
+    'prefix':'process.version'
+    'body':'process.version'
+  'process.uptime()':
+    'prefix':'process.uptime'
+    'body':'process.uptime'
+  'process.argv':
+    'prefix':'process.argv'
+    'body':'process.argv'
+  'process.exit()':
+    'prefix':'process.exit'
+    'body':'process.exit(${1:});'
+  'process.kill()':
+    'prefix':'process.kill'
+    'body':'process.kill(${1:});'
+  '__dirname':
+    'prefix':'dirn'
+    'body':'__dirname'
+  #node- require core modules
+  'const util':
+    'prefix': 'util'
+    'body': "const util = require('util');"
+  'const http':
+    'prefix': 'http'
+    'body': "const http = require('http');"
+  'const fs':
+    'prefix': 'fs'
+    'body': "const fs = require('fs');"
+  'const path':
+    'prefix': 'path'
+    'body': "const path = require('path');"
+  'const zlib':
+    'prefix': 'zlib'
+    'body': "const zlib = require('zlib');"
+  'const buffer':
+    'prefix': 'buffer'
+    'body': "const buffer = require('buffer');"
+  'const stream':
+    'prefix': 'stream'
+    'body': "const stream = require('stream');"
+  'const querystring':
+    'prefix': 'qstring'
+    'body': "const querystring = require('querystring');"
+  'const assert':
+    'prefix': 'assert'
+    'body': "const assert = require('assert');"
+  #consoles shorthand
+  'console.log':
+    'prefix':'cl'
+    'body':'console.log(${1:});'
+  'console.info':
+    'prefix':'ci'
+    'body':'console.info(${1:});'
+  'console.error':
+    'prefix':'ce'
+    'body':'console.error(${1:});'
+  'console.dir':
+    'prefix':'cd'
+    'body':'console.dir(${1:});'
+  'console.warn':
+    'prefix':'cw'
+    'body':'console.warn(${1:abc});'
+  #node - assert module
+  'assert.equal':
+    'prefix':'assert.equal'
+    'body':'assert.equal(${1:actual}, ${2:expected});'
+  'assert.notEqual':
+    'prefix':'assert.notEqual'
+    'body':'assert.notEqual(${1:actual}, ${2:expected});'
+  'assert.deepEqual':
+    'prefix':'assert.deepEqual'
+    'body':'assert.deepEqual(${1:actual}, ${2:expected});'
+  'assert.ok':
+    'prefix':'assert.ok'
+    'body':'assert.ok(${1:actual});'
+  'assert.ifError':
+    'prefix':'assert.ifError'
+    'body':'assert.ifError(${1:actual});'
+  #promise
+  'Promise':
+    'prefix':'p'
+    'body':'''
+      new Promise(function(resolve, reject) {
+      \t${1:}
+      });
+    '''
+  'Promise.then':
+    'prefix':'pthen'
+    'body':'''
+      ${1:promise}.then(function (${2:value}) {
+      \t${3:}
+      });
+    '''
+  'Promise Catch':
+    'prefix':'pcatch'
+    'body':'''
+      ${1:promise}.catch(function (${2:err}) {
+      \t${3:}
+      });
+    '''
+  #timer functions
+  'setInterval':
+    'prefix':'si'
+    'body':'''
+      setInterval(function () {
+      \t${1:}
+      },${2:delay})
+    '''
+  'setTimeout':
+    'prefix':'st'
+    'body':'''
+      setTimeout(function () {
+      \t${1:}
+      },${2:delay})
+    '''
+  'setImmediate':
+    'prefix':'sim'
+    'body':'''
+      setImmediate(function () {
+      \t${1:}
+      })
+    '''
+  # BDD Testing
+  'describe':
+    'prefix':'desc'
+    'body':"""
+      describe('${1:description}', function () {
+      \t${2:}
+      });
+    """
+  'it -async':
+    'prefix':'itasync'
+    'body':"""
+      it('should ${1:}', function (done) {
+      \t${2:}
+      done();
+      });
+    """
+  'it -sync':
+    'prefix':'it'
+    'body':"""
+      it('should ${1:}', function () {
+      \t${2:}
+      });
+    """
+  'it -pending':
+    'prefix':'itpending'
+    'body':"""
+      it('should ${1:}');
+    """
+  'before':
+    'prefix':'bef'
+    'body':"""
+      before(function () {
+      \t${1:}
+      });
+    """
+  'after':
+    'prefix':'aft'
+    'body':"""
+      after(function () {
+      \t${1:}
+      });
+    """
+  'beforeEach':
+    'prefix':'befe'
+    'body':"""
+      beforeEach(function () {
+      \t${1:}
+      });
+    """
+  'afterEach':
+    'prefix':'afte'
+    'body':"""
+      afterEach(function () {
+      \t${1:}
+      });
+    """
+  # BDD chai expect library
+  'expect':
+    'prefix':'expect'
+    'body':'const expect = chai.expect;'
+  'expect equal':
+    'prefix':'expecte'
+    'body':'expect(${1:actual}).to.equal(${2:expected});'
+  'expect notEqual':
+    'prefix':'expectne'
+    'body':'expect(${1:actual}).to.not.equal(${2:expected});'
+  'expect deep equal':
+    'prefix':'expectde'
+    'body':'expect(${1:actual}).to.eql(${2:expected});'
+  'expect not deep equal':
+    'prefix':'expectnde'
+    'body':'expect(${1:actual}).to.not.eql(${2:expected});'
+  #general purpose JS syntax
+  #object
+  'key:value pair':
+    'prefix':'kv'
+    'body':'${1:key}: ${2:value}'
+  'method for object':
+    'prefix':'fnm'
+    'body':'''
+      ${1:method}: function (${}) {
+        ${2:}
+      }
+    '''
+  #function(s)
+  'anonymous function':
+    'prefix':'fn'
+    'body':'''
+      function (${1:arg}, ${2:arg}) {
+        ${2:}
+      }
+    '''
+  'named function':
+    'prefix':'fnn'
+    'body':'''
+      function ${1:name} (${2:arg}) {
+        ${3:}
+      }
+    '''
+  'function expression':
+    'prefix':'fne'
+    'body':'''
+      var ${1:name} = function (${2:arg}) {
+        ${3:}
+      }
+    '''
+  'immediately invoked function expression':
+    'prefix':'iife'
+    'body':'''
+      (function(${1:window}, ${2:document}) {
+        \t${0:// body...}
+      })();
+    '''
+  'strict mode':
+    'prefix':'use'
+    'body':"""
+      'use strict;'
+      ${1:}
+    """
+  'return':
+    'prefix':'r'
+    'body':'return ${1:};'
+  'return true':
+    'prefix':'rt'
+    'body':'return true;'
+  'return false':
+    'prefix':'rt'
+    'body':'return false;'
+  'return promise':
+    'prefix':'rp'
+    'body':'''
+      return new Promise(function (resolve, reject) => {
+      \t${1:}
+      });
+    '''
+  'length':
+    'prefix':'len'
+    'body':'length'
+  'alert':
+    'prefix':'al'
+    'body':"alert('${1:}');"
+  #supports ES6
+  'import':
+    'prefix':'im'
+    'body':'import ${1:name} from ${2:module}'
+  'arrow fn with params':
+    'prefix': 'ar'
+    'body':'''
+      (${1:arg1}, ${2:arg2}) => {
+        ${3:}
+      }
+    '''
+  'arrow fn without params':
+    'prefix': 'aro'
+    'body':'''
+      () => {
+        ${1:}
+      }
+    '''
+  'arrow fn named':
+    'prefix': 'arn'
+    'body':'''
+      var ${1:name} = () => {
+      \t${2:}
+      }
+    '''
+  'callback ES6':
+    'prefix':'cb6'
+    'body':'''
+      (err, ${1:arg}) => {
+        ${2:}
+      }
+    '''
+  'method ES6':
+    'prefix':'meth'
+    'body':'''
+      ${1:method} (${}) {
+        ${2:}
+      }
+    '''
+  'getter':
+    'prefix':'get'
+    'body':'''
+      get ${1:}() {
+      \t${0}
+      }
+    '''
+  'setter':
+    'prefix':'set'
+    'body':'''
+      set ${1:}(${2:val}) {
+      \t${0}
+      }
+    '''
+  #event handler in ES6
+  'event handler ES6':
+    'prefix':'on6'
+    'body':'''
+      ${1:emitter}.on('${2:event}', (${3:arguments}) => {
+      \t${4:}
+      });
+    '''
+  # process.nextTick in ES6
+  'process.nextTick() ES6':
+    'prefix':'process.nextTick6'
+    'body':'''
+      process.nextTick((${1:arg}) => {
+      \t${2:}
+      });
+    '''
+  #timer functions in ES6
+  'setInterval ES6':
+    'prefix':'si6'
+    'body':'''
+      setInterval(() => {
+      \t${1:}
+      },${2:delay})
+    '''
+  'setTimeout ES6':
+    'prefix':'st6'
+    'body':'''
+      setTimeout(() => {
+      \t${1:}
+      },${2:delay})
+    '''
+  'setImmediate ES6':
+    'prefix':'sim6'
+    'body':'''
+      setImmediate(() => {
+      \t${1:}
+      })
+    '''
+  #Promise in ES6
+  'Promise ES6':
+    'prefix':'p6'
+    'body':'''
+      new Promise((resolve, reject) => {
+      \t${1:}
+      });
+    '''
+  'Promise.then ES6':
+    'prefix':'pthen6'
+    'body':'''
+      ${1:promise}.then((${2:value}) => {
+      \t${3:}
+      });
+    '''
+  'Promise Catch in ES6':
+    'prefix':'pcatch6'
+    'body':'''
+      ${1:promise}.catch((${2:err}) => {
+      \t${3:}
+      });
+    '''
+  'return promise':
+    'prefix':'rp6'
+    'body':'''
+      return new Promise((resolve, reject) => {
+      \t${1:}
+      });
+    '''
+  #JSON
+  'JSON.parse':
+    'prefix':'jparse'
+    'body':'JSON.parse(${1:});'
+  'JSON.stringify':
+    'prefix':'jstr'
+    'body':'JSON.stringify(${1:});'

@@ -2,7 +2,7 @@
   #nodejs syntax
   'require':
     'prefix':'re'
-    'body':'require("${1:module}");'
+    'body':"require('${1:module}');""
   'exports':
     'prefix':'exp'
     'body':'exports.${1:name} = ${2:value};'
@@ -280,7 +280,7 @@
   # BDD chai expect library
   'expect':
     'prefix':'expect'
-    'body':'const expect = chai.expect;'
+    'body':'const expect = require('chai').expect;'
   'expect equal':
     'prefix':'expecte'
     'body':'expect(${1:actual}).to.equal(${2:expected});'

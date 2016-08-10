@@ -13,7 +13,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 **Nodejs Commonly used entities:**
 - `re` require
 - `me` module.exports
-- `exp` exports
+- `ex` exports
 - `cb` callback()
 
 **path Module**

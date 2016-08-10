@@ -2,9 +2,9 @@
   #nodejs syntax
   'require':
     'prefix':'re'
-    'body':"require('${1:module}');""
+    'body':"require('${1:module}');"
   'exports':
-    'prefix':'exp'
+    'prefix':'ex'
     'body':'exports.${1:name} = ${2:value};'
   'module.exports':
     'prefix':'me'

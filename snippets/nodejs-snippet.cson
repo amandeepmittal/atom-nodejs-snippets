@@ -280,7 +280,7 @@
   # BDD chai expect library
   'expect':
     'prefix':'expect'
-    'body':'const expect = require('chai').expect;'
+    'body':"const expect = require('chai').expect;"
   'expect equal':
     'prefix':'expecte'
     'body':'expect(${1:actual}).to.equal(${2:expected});'

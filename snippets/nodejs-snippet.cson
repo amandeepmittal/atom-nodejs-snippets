@@ -1,7 +1,7 @@
 '.source.js, .source.jsx, .source.ts':
   #nodejs syntax
   'require':
-    'prefix':'re'
+    'prefix':'req'
     'body':"require('${1:module}');"
   'exports':
     'prefix':'ex'

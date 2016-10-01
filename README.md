@@ -11,7 +11,7 @@ Go to `Settings > Install` & then search for `atom-nodejs-snippets` under Packag
 These snippets are for daily use to avoid writing as much as it could the boilerplate code. If you like, to add yours, feel free to contribute.
 
 **Nodejs Commonly used entities:**
-- `re` require
+- `req` require
 - `me` module.exports
 - `ex` exports
 - `cb` callback()

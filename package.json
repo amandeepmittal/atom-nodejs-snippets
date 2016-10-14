@@ -1,7 +1,7 @@
 {
   "name": "atom-nodejs-snippets",
   "main": "./lib/atom-nodejs-snippets",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A collection of Nodejs, JavaScript snippets.",
   "keywords": [
     "nodejs",

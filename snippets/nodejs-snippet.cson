@@ -117,33 +117,61 @@
   '__dirname':
     'prefix':'dirn'
     'body':'__dirname'
-  #node- require core modules
-  'const util':
+  #node- require core modules ES5
+  'var util':
     'prefix': 'util'
+    'body': "var util = require('util');"
+  'var http':
+    'prefix': 'http'
+    'body': "var http = require('http');"
+  'var fs':
+    'prefix': 'fs'
+    'body': "var fs = require('fs');"
+  'var path':
+    'prefix': 'path'
+    'body': "var path = require('path');"
+  'var zlib':
+    'prefix': 'zlib'
+    'body': "var zlib = require('zlib');"
+  'var buffer':
+    'prefix': 'buffer'
+    'body': "var buffer = require('buffer');"
+  'var stream':
+    'prefix': 'stream'
+    'body': "var stream = require('stream');"
+  'var querystring':
+    'prefix': 'qstring'
+    'body': "var querystring = require('querystring');"
+  'var assert':
+    'prefix': 'assert'
+    'body': "var assert = require('assert');"
+  #node- require core modules ES6
+  'const util':
+    'prefix': 'util6'
     'body': "const util = require('util');"
   'const http':
-    'prefix': 'http'
+    'prefix': 'http6'
     'body': "const http = require('http');"
   'const fs':
-    'prefix': 'fs'
+    'prefix': 'fs6'
     'body': "const fs = require('fs');"
   'const path':
-    'prefix': 'path'
+    'prefix': 'path6'
     'body': "const path = require('path');"
   'const zlib':
-    'prefix': 'zlib'
+    'prefix': 'zlib6'
     'body': "const zlib = require('zlib');"
   'const buffer':
-    'prefix': 'buffer'
+    'prefix': 'buffer6'
     'body': "const buffer = require('buffer');"
   'const stream':
-    'prefix': 'stream'
+    'prefix': 'stream6'
     'body': "const stream = require('stream');"
   'const querystring':
-    'prefix': 'qstring'
+    'prefix': 'qstring6'
     'body': "const querystring = require('querystring');"
   'const assert':
-    'prefix': 'assert'
+    'prefix': 'assert6'
     'body': "const assert = require('assert');"
   #consoles shorthand
   'console.log':
@@ -160,7 +188,7 @@
     'body':'console.dir(${1:});'
   'console.warn':
     'prefix':'cw'
-    'body':'console.warn(${1:abc});'
+    'body':'console.warn(${1:});'
   #node - assert module
   'assert.equal':
     'prefix':'assert.equal'
@@ -364,7 +392,7 @@
     'body':"alert('${1:}');"
   #supports ES6
   'import':
-    'prefix':'im'
+    'prefix':'imp'
     'body':'import ${1:name} from ${2:module}'
   'arrow fn with params':
     'prefix': 'ar'

@@ -10,6 +10,8 @@ Go to `Settings > Install` & then search for `atom-nodejs-snippets` under Packag
 ## Snippets
 These snippets are for daily use to avoid writing as much as it could the boilerplate code. If you like, to add yours, feel free to contribute.
 
+To use, please press tab after _shortkeys_ expressed as following.
+
 **Nodejs Commonly used entities:**
 - `req` require
 - `me` module.exports
@@ -52,7 +54,8 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `dirn` dirname
 
 **boilerplate code for requiring core modules**
-- `util` const util = require('util');
+_For ES5_: var util = require('util');
+- `util`
 - `http`
 - `fs`
 - `path`
@@ -61,6 +64,16 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `stream`
 - `qstring`
 - `assert`
+_For ES6_: const util = require('util');
+- `util6`
+- `http6`
+- `fs6`
+- `path6`
+- `zlib6`
+- `buffer6`
+- `stream6`
+- `qstring6`
+- `assert6`
 
 **Consoles Shorthand**
 - `cl` console.log()
@@ -118,7 +131,7 @@ These snippets are for daily use to avoid writing as much as it could the boiler
 - `al` alert
 
 **ES6 Syntax**
-- `im` import X from module
+- `imp` import X from module
 - `ar` arrow function with parameters
 - `aro` arrow function without parameters
 - `arn` named arrow function

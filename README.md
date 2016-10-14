@@ -54,6 +54,7 @@ To use, please press tab after _shortkeys_ expressed as following.
 - `dirn` dirname
 
 **boilerplate code for requiring core modules**
+
 _For ES5_: var util = require('util');
 - `util`
 - `http`
@@ -64,6 +65,7 @@ _For ES5_: var util = require('util');
 - `stream`
 - `qstring`
 - `assert`
+
 _For ES6_: const util = require('util');
 - `util6`
 - `http6`

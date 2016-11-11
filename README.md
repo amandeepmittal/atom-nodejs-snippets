@@ -83,6 +83,8 @@ _For ES6_: const util = require('util');
 - `cd` console.dir()
 - `ci` console.info()
 - `ce` console.error()
+- `cg` console.group()
+- `cge` console.groupEnd()
 
 **assert Module**
 - `assert.equal`

@@ -189,6 +189,12 @@
   'console.warn':
     'prefix':'cw'
     'body':'console.warn(${1:});'
+  'console.group':
+    'prefix':'cg'
+    'body':'console.group(${1:});'
+  'console.groupEnd':
+    'prefix':'cge'
+    'body':'console.groupEnd(${1:});'
   #node - assert module
   'assert.equal':
     'prefix':'assert.equal'

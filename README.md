@@ -78,7 +78,7 @@ _For ES6_: const util = require('util');
 - `assert6`
 
 **Consoles Shorthand**
-- `cl` console.log()
+- `clo` console.log()
 - `cw` console.warn()
 - `cd` console.dir()
 - `ci` console.info()
@@ -124,6 +124,7 @@ _For ES6_: const util = require('util');
 - `kv` key:value pair (object)
 - `fnm` method (object)
 - `fn` anonymous function
+- `fno` anonymous function without parameter
 - `fnn` named function
 - `fne` function expression
 - `iife` immediately invoked function expression

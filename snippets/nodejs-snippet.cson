@@ -426,7 +426,7 @@
     'body':'''
       const ${1:name} = () => {
       \t${2:}
-      }
+      };
     '''
   'callback ES6':
     'prefix':'cb6'

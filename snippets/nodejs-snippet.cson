@@ -175,7 +175,7 @@
     'body': "const assert = require('assert');"
   #consoles shorthand
   'console.log':
-    'prefix':'cl'
+    'prefix':'clo'
     'body':'console.log(${1:});'
   'console.info':
     'prefix':'ci'
@@ -347,6 +347,13 @@
         ${3:}
       }
     '''
+  'anonymous function without parameter':
+    'prefix':'fno'
+    'body':'''
+      function (${1:}) {
+        ${2:}
+      }
+    '''
   'named function':
     'prefix':'fnn'
     'body':'''
@@ -359,7 +366,7 @@
     'body':'''
       var ${1:name} = function (${2:arg}) {
         ${3:}
-      }
+      };
     '''
   'immediately invoked function expression':
     'prefix':'iife'

@@ -1,5 +1,9 @@
 # Nodejs Snippets for [Atom](https://atom.io)
 
+[![apm](https://img.shields.io/apm/v/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)
+[![apm](https://img.shields.io/apm/dm/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)
+[![apm](https://img.shields.io/apm/l/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)
+
 A collection of Nodejs, JavaScript snippets.
 
 This package also support some of the ES6 syntax half-heartedly.

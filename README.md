@@ -69,6 +69,7 @@ _For ES5_: var util = require('util');
 - `stream`
 - `qstring`
 - `assert`
+- `url()`
 
 _For ES6_: const util = require('util');
 - `util6`
@@ -80,6 +81,7 @@ _For ES6_: const util = require('util');
 - `stream6`
 - `qstring6`
 - `assert6`
+- `url6`
 
 **Consoles Shorthand**
 - `clo` console.log()
@@ -138,6 +140,7 @@ _For ES6_: const util = require('util');
 - `rf` return false
 - `rp` return promise
 - `al` alert
+- `us;` strict mode
 
 **ES6 Syntax**
 - `imp` import X from module

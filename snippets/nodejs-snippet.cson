@@ -145,6 +145,10 @@
   'var assert':
     'prefix': 'assert'
     'body': "var assert = require('assert');"
+  'var url':
+    'prefix': 'url()'
+    'body': "var url = require('url');"
+
   #node- require core modules ES6
   'const util':
     'prefix': 'util6'
@@ -173,6 +177,10 @@
   'const assert':
     'prefix': 'assert6'
     'body': "const assert = require('assert');"
+  'var url6':
+    'prefix': 'url()'
+    'body': "var url = require('url');"
+
   #consoles shorthand
   'console.log':
     'prefix':'clo'
@@ -530,3 +538,8 @@
   'JSON.stringify':
     'prefix':'jstr'
     'body':'JSON.stringify(${1:});'
+
+  # activate strict mode
+  'use strict':
+    'prefix': 'us;'
+    'body': "'use strict';"

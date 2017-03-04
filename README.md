@@ -84,7 +84,7 @@ _For ES6_: const util = require('util');
 - `url6`
 
 **Consoles Shorthand**
-- `clo` console.log()
+- `clog` console.log()
 - `cw` console.warn()
 - `cd` console.dir()
 - `ci` console.info()

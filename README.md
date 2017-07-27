@@ -142,7 +142,6 @@ Eg: `const util = require('util');`
 - `meth` Method (object)
 - `get` getter
 - `set` setter
-- `on6` event handler in ES6
 - `process.nextTick6`
 
 **JSON**

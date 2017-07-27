@@ -52,7 +52,7 @@
   'event handler':
     'prefix':'on'
     'body':'''
-      ${1:emitter}.on('${2:event}', function (${3:arguments}) {
+      ${1:emitter}.on('${2:event}', (${3:arguments}) => {
       \t${4:}
       });
     '''
@@ -432,14 +432,6 @@
       set ${1:}(${2:val}) {
       \t${0}
       }
-    '''
-  #event handler in ES6
-  'event handler ES6':
-    'prefix':'on6'
-    'body':'''
-      ${1:emitter}.on('${2:event}', (${3:arguments}) => {
-      \t${4:}
-      });
     '''
   # process.nextTick in ES6
   'process.nextTick() ES6':

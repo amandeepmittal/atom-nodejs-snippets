@@ -263,28 +263,28 @@
   'before':
     'prefix':'bef'
     'body':"""
-      before(function () {
+      before(() => {
       \t${1:}
       });
     """
   'after':
     'prefix':'aft'
     'body':"""
-      after(function () {
+      after(() => {
       \t${1:}
       });
     """
   'beforeEach':
     'prefix':'befe'
     'body':"""
-      beforeEach(function () {
+      beforeEach(() => {
       \t${1:}
       });
     """
   'afterEach':
     'prefix':'afte'
     'body':"""
-      afterEach(function () {
+      afterEach(() => {
       \t${1:}
       });
     """

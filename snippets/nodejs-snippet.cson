@@ -1,7 +1,7 @@
 '.source.js, .source.jsx, .source.ts':
   #nodejs syntax
   'require':
-    'prefix':'req'
+    'prefix':'require'
     'body':"require('${1:module}');"
   'exports':
     'prefix':'ex'
@@ -117,69 +117,38 @@
   '__dirname':
     'prefix':'dirn'
     'body':'__dirname'
-  #node- require core modules ES5
-  'var util':
-    'prefix': 'util'
-    'body': "var util = require('util');"
-  'var http':
-    'prefix': 'http'
-    'body': "var http = require('http');"
-  'var fs':
-    'prefix': 'fs'
-    'body': "var fs = require('fs');"
-  'var path':
-    'prefix': 'path'
-    'body': "var path = require('path');"
-  'var zlib':
-    'prefix': 'zlib'
-    'body': "var zlib = require('zlib');"
-  'var buffer':
-    'prefix': 'buffer'
-    'body': "var buffer = require('buffer');"
-  'var stream':
-    'prefix': 'stream'
-    'body': "var stream = require('stream');"
-  'var querystring':
-    'prefix': 'qstring'
-    'body': "var querystring = require('querystring');"
-  'var assert':
-    'prefix': 'assert'
-    'body': "var assert = require('assert');"
-  'var url':
-    'prefix': 'url()'
-    'body': "var url = require('url');"
 
   #node- require core modules ES6
   'const util':
-    'prefix': 'util6'
+    'prefix': 'util'
     'body': "const util = require('util');"
   'const http':
-    'prefix': 'http6'
+    'prefix': 'http'
     'body': "const http = require('http');"
   'const fs':
-    'prefix': 'fs6'
+    'prefix': 'fs'
     'body': "const fs = require('fs');"
   'const path':
-    'prefix': 'path6'
+    'prefix': 'path'
     'body': "const path = require('path');"
   'const zlib':
-    'prefix': 'zlib6'
+    'prefix': 'zlib'
     'body': "const zlib = require('zlib');"
-  'const buffer':
-    'prefix': 'buffer6'
-    'body': "const buffer = require('buffer');"
   'const stream':
-    'prefix': 'stream6'
+    'prefix': 'stream'
     'body': "const stream = require('stream');"
   'const querystring':
-    'prefix': 'qstring6'
+    'prefix': 'qstring'
     'body': "const querystring = require('querystring');"
   'const assert':
-    'prefix': 'assert6'
+    'prefix': 'assert'
     'body': "const assert = require('assert');"
-  'var url6':
+  'const url':
     'prefix': 'url()'
-    'body': "var url = require('url');"
+    'body': "const url = require('url');"
+  'const string decoder':
+    'prefix': 'stringdecoder'
+    'body': "const { StringDecoder } = require('string_decoder');"
 
   #consoles shorthand
   'console.log':

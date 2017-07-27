@@ -57,31 +57,22 @@ To use, please press tab after _shortkeys_ expressed as following.
 - `process.nextTick` process.nextTick()
 - `dirn` dirname
 
-**boilerplate code for requiring core modules**
+**boilerplate code for importing core modules**
 
-_For ES5_: var util = require('util');
+_For ES6_:
+
+Eg: `const util = require('util');`
+
 - `util`
-- `http`
+- `htt6`
 - `fs`
 - `path`
 - `zlib`
-- `buffer`
 - `stream`
 - `qstring`
 - `assert`
-- `url()`
-
-_For ES6_: const util = require('util');
-- `util6`
-- `http6`
-- `fs6`
-- `path6`
-- `zlib6`
-- `buffer6`
-- `stream6`
-- `qstring6`
-- `assert6`
-- `url6`
+- `url`
+- `string_decoder`
 
 **Consoles Shorthand**
 - `clog` console.log()

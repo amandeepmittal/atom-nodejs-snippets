@@ -93,7 +93,7 @@ Eg: `const util = require('util');`
 **Promise**
 - `p` new Promise(function(resolve, reject) {});
 - `pthen` promise.then(function (){});
-- `catch` promise.catch(function (err) {});
+- `pcatch` promise.catch(function (err) {});
 
 **timer functions**
 - `si` setInterval()

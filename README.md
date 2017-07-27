@@ -144,8 +144,6 @@ Eg: `const util = require('util');`
 - `set` setter
 - `on6` event handler in ES6
 - `process.nextTick6`
-- `si6`, `st6`, `sim6` Timer functions in ES6
-- `p6`, `pthen6`, `pcatch6`, `rp6` Promises in ES6
 
 **JSON**
 - `jparse` JSON.parse()
@@ -153,8 +151,8 @@ Eg: `const util = require('util');`
 
 ---
 ## TODO
-- Add more ES6 snippets
-- Convert BDD & BDD Chai Library snippets to ES6
+- [X] Add more ES6 snippets
+- [ ] Convert BDD & BDD Chai Library snippets to ES6
 
 ## Contribute
 

@@ -449,57 +449,6 @@
       \t${2:}
       });
     '''
-  #timer functions in ES6
-  'setInterval ES6':
-    'prefix':'si6'
-    'body':'''
-      setInterval(() => {
-      \t${1:}
-      },${2:delay})
-    '''
-  'setTimeout ES6':
-    'prefix':'st6'
-    'body':'''
-      setTimeout(() => {
-      \t${1:}
-      },${2:delay})
-    '''
-  'setImmediate ES6':
-    'prefix':'sim6'
-    'body':'''
-      setImmediate(() => {
-      \t${1:}
-      })
-    '''
-  #Promise in ES6
-  'Promise ES6':
-    'prefix':'p6'
-    'body':'''
-      new Promise((resolve, reject) => {
-      \t${1:}
-      });
-    '''
-  'Promise.then ES6':
-    'prefix':'pthen6'
-    'body':'''
-      ${1:promise}.then((${2:value}) => {
-      \t${3:}
-      });
-    '''
-  'Promise Catch in ES6':
-    'prefix':'pcatch6'
-    'body':'''
-      ${1:promise}.catch((${2:err}) => {
-      \t${3:}
-      });
-    '''
-  'return promise':
-    'prefix':'rp6'
-    'body':'''
-      return new Promise((resolve, reject) => {
-      \t${1:}
-      });
-    '''
   #JSON
   'JSON.parse':
     'prefix':'jparse'

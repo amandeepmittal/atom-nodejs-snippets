@@ -35,7 +35,7 @@ To use, please press tab after _shortkeys_ expressed as following.
 - `fswrite` fs.writeFile()
 
 **event Module**
-- `on` event handler | emitter.on('event', function(){})
+- `on` event handler | emitter.on('event',() => {})
 
 **stream Module**
 - `rstream` readable stream

@@ -125,7 +125,6 @@ Eg: `const util = require('util');`
 - `fnn` named function
 - `fne` function expression
 - `iife` immediately invoked function expression
-- `use` strict mode
 - `r` return
 - `rt` return true
 - `rf` return false

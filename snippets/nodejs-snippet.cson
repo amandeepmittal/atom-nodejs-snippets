@@ -352,12 +352,6 @@
         \t${0:// body...}
       })();
     '''
-  'strict mode':
-    'prefix':'use'
-    'body':"""
-      'use strict;'
-      ${1:}
-    """
   'return':
     'prefix':'r'
     'body':'return ${1:};'
@@ -449,7 +443,7 @@
     'prefix':'jstr'
     'body':'JSON.stringify(${1:});'
 
-  # activate strict mode
+  # strict mode
   'use strict':
     'prefix': 'us;'
     'body': "'use strict';"

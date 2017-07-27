@@ -214,21 +214,21 @@
   'setInterval':
     'prefix':'si'
     'body':'''
-      setInterval(function () {
+      setInterval(() => {
       \t${1:}
       },${2:delay})
     '''
   'setTimeout':
     'prefix':'st'
     'body':'''
-      setTimeout(function () {
+      setTimeout(() => {
       \t${1:}
       },${2:delay})
     '''
   'setImmediate':
     'prefix':'sim'
     'body':'''
-      setImmediate(function () {
+      setImmediate(() => {
       \t${1:}
       })
     '''
@@ -236,14 +236,14 @@
   'describe':
     'prefix':'desc'
     'body':"""
-      describe('${1:description}', function () {
+      describe('${1:description}', () => {
       \t${2:}
       });
     """
   'it -async':
     'prefix':'itasync'
     'body':"""
-      it('should ${1:}', function (done) {
+      it('should ${1:}', (done) => {
       \t${2:}
       done();
       });
@@ -251,7 +251,7 @@
   'it -sync':
     'prefix':'it'
     'body':"""
-      it('should ${1:}', function () {
+      it('should ${1:}', () => {
       \t${2:}
       });
     """

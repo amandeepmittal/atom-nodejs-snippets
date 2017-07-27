@@ -192,21 +192,21 @@
   'Promise':
     'prefix':'p'
     'body':'''
-      new Promise(function(resolve, reject) {
+      new Promise((resolve, reject) => {
       \t${1:}
       });
     '''
   'Promise.then':
     'prefix':'pthen'
     'body':'''
-      ${1:promise}.then(function (${2:value}) {
+      ${1:promise}.then((${2:value}) => {
       \t${3:}
       });
     '''
   'Promise Catch':
     'prefix':'pcatch'
     'body':'''
-      ${1:promise}.catch(function (${2:err}) {
+      ${1:promise}.catch((${2:err}) => {
       \t${3:}
       });
     '''

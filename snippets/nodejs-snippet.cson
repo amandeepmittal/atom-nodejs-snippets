@@ -341,7 +341,7 @@
   'function expression':
     'prefix':'fne'
     'body':'''
-      var ${1:name} = function (${2:arg}) {
+      const ${1:name} = (${2:arg}) => {
         ${3:}
       };
     '''

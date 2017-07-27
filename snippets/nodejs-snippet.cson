@@ -433,9 +433,9 @@
       \t${0}
       }
     '''
-  # process.nextTick in ES6
-  'process.nextTick() ES6':
-    'prefix':'process.nextTick6'
+  # process.nextTick()
+  'process.nextTick()':
+    'prefix':'nexttick'
     'body':'''
       process.nextTick((${1:arg}) => {
       \t${2:}

@@ -142,7 +142,9 @@ Eg: `const util = require('util');`
 - `meth` Method (object)
 - `get` getter
 - `set` setter
-- `process.nextTick6`
+
+**`process.nextTikc()`**
+- `nexttick`
 
 **JSON**
 - `jparse` JSON.parse()

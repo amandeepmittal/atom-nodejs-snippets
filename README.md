@@ -64,7 +64,7 @@ _For ES6_:
 Eg: `const util = require('util');`
 
 - `util`
-- `htt6`
+- `http`
 - `fs`
 - `path`
 - `zlib`

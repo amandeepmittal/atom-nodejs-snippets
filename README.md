@@ -1,5 +1,7 @@
 # Nodejs Snippets for [Atom](https://atom.io)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/amandeepmittal/atom-nodejs-snippets.svg)](https://greenkeeper.io/)
+
 [![apm](https://img.shields.io/apm/v/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)
 [![apm](https://img.shields.io/apm/dm/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)
 [![apm](https://img.shields.io/apm/l/atom-nodejs-snippets.svg?style=flat-square)](https://atom.io/packages/atom-nodejs-snippets)

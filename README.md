@@ -157,7 +157,7 @@ Eg: `const util = require('util');`
 * `get` getter
 * `set` setter
 
-**`process.nextTikc()`**
+**`process.nextTick()`**
 
 * `nexttick`
 

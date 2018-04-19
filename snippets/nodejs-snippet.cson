@@ -80,13 +80,6 @@
   'process.on':
     'prefix':'process.on()'
     'body':'process.on(${1:}, (${2:})=> {});'
-  'process.nextTick()':
-    'prefix':'process.nextTick'
-    'body':'''
-      process.nextTick( function(${1:arg}) {
-      \t${2:}
-      });
-    '''
   'process.pid':
     'prefix':'process.pid'
     'body':'process.pid'
